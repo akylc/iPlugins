@@ -1,8 +1,14 @@
 {
     "compilerOptions": {
         "watch": true,
-        "module": "ESNext",
+        "module": "CommonJS",
         "declaration": true,
-        "declarationDir": "./declare"
+        "declarationDir": "./declare",
+        "lib": [
+            "DOM",
+            "ES2015",
+            "ES2016",
+            "ES2017",
+        ]
     }
 }

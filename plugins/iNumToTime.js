@@ -1,9 +1,11 @@
+"use strict";
+exports.__esModule = true;
 /**
  * 秒数转时间
  * @param num 要转换的秒数
  * @param format 输出的时间格式, 默认'dd:hh:mm:ss'
 */
-export default function iSecToTime(num, format) {
+function iSecToTime(num, format) {
     if (format === void 0) { format = 'dd:hh:mm:ss'; }
     try {
         if (num < 0)
@@ -37,3 +39,4 @@ export default function iSecToTime(num, format) {
         return '时间格式有误!';
     }
 }
+exports["default"] = iSecToTime;
