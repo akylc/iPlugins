@@ -1,12 +1,10 @@
-"use strict";
-exports.__esModule = true;
 /**
  * 实例方法: 解析时间戳
  * :将时间戳解析成对应的时间格式并输出
  * @param ts 时间戳
  * @param format 想要返回的时间格式, 例如: 'yyyy/mm/dd hh:mm:ss.ms'
  */
-function iTimestamp(timestamp, format) {
+export default function iTimestamp(timestamp, format) {
     if (format === void 0) { format = 'yyyy/mm/dd hh:mm:ss.ms'; }
     var oDate = new Date(timestamp);
     var matchResult = format.match(/^(y{2}|y{4})?([^ymdhs]{1})?(m{1,2})?([^ymdhs]{1})?(d{1,2})?([^ymdhs]{1})?(h{1,2})?([^ymdhs]{1})?(m{1,2})?([^ymdhs]{1})?(s{1,2})?([^ymdhs]{1})?(ms)?([^ymdhs]{1})?$/i);
@@ -46,4 +44,3 @@ function iTimestamp(timestamp, format) {
     var millisecondSymbol = matchResult[14] || '';
     return "" + year + yearSymbol + month + monthSymbol + date + delimiter + hour + hourSymbol + minute + minuteSymbol + second + secondSymbol + millisecond + millisecondSymbol;
 }
-exports["default"] = iTimestamp;

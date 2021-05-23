@@ -1,10 +1,8 @@
-"use strict";
-exports.__esModule = true;
 /**
  * 数字分割
  * @param number 要分割的数字
  */
-function default_1(number) {
+export default function iNumSplit(number) {
     if (!number) {
         return '';
     }
@@ -17,4 +15,3 @@ function default_1(number) {
         .reverse();
     return strArr.join('');
 }
-exports["default"] = default_1;
