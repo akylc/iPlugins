@@ -7,7 +7,7 @@
 export default function iTimestamp(timestamp, format) {
     if (format === void 0) { format = 'yyyy/mm/dd hh:mm:ss.ms'; }
     var oDate = new Date(timestamp);
-    var matchResult = format.match(/^(y{2}|y{4})?([^ymdhs]{1})?(m{1,2})?([^ymdhs]{1})?(d{1,2})?([^ymdhs]{1})?(h{1,2})?([^ymdhs]{1})?(m{1,2})?([^ymdhs]{1})?(s{1,2})?([^ymdhs]{1})?(ms)?([^ymdhs]{1})?$/i);
+    var matchResult = format.match(/^(y{2}|y{4})?([^ymdhs]{1})?(m{1,2})?([^ymdhs]{1})?(d{1,2})?([^ymdhs]{1,2})?(h{1,2})?([^ymdhs]{1})?(m{1,2})?([^ymdhs]{1})?(s{1,2})?([^ymdhs]{1})?(ms)?([^ymdhs]{1})?$/i);
     // 格式错误中断解析
     if (!matchResult) {
         console.error('时间戳解析失败, 格式错误');
