@@ -4,4 +4,4 @@
  * @param ts 时间戳
  * @param format 想要返回的时间格式, 例如: 'yyyy/mm/dd hh:mm:ss.ms'
  */
-export default function iTimestamp(timestamp: any, format?: string): string;
+export default function iTimestamp(timestamp: number | string | Date, format?: string): string;

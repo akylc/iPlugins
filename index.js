@@ -5,4 +5,7 @@ import iTimestamp from './plugins/iTimestamp';
 import { iCoding10To62, iCoding62To10 } from './plugins/iCoding';
 import iNumSplit from './plugins/numberSplit';
 import lrz from './cloneRepository/lrz.all.bundle.min.js';
-export { iSecToTime, iThrottle, iDebounce, iTimestamp, iCoding10To62, iCoding62To10, iNumSplit, lrz };
+// 数组排序, Array原型同时挂载
+import './plugins/Array.vaSort';
+var iSort = Array.prototype.vaSort;
+export { iSecToTime, iThrottle, iDebounce, iTimestamp, iCoding10To62, iCoding62To10, iNumSplit, lrz, iSort };

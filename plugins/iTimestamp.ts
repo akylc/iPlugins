@@ -4,8 +4,14 @@
  * @param ts 时间戳
  * @param format 想要返回的时间格式, 例如: 'yyyy/mm/dd hh:mm:ss.ms'
  */
- export default function iTimestamp(timestamp, format = 'yyyy/mm/dd hh:mm:ss.ms'){
-    const oDate = new Date(timestamp);
+ export default function iTimestamp(timestamp: number|string|Date, format = 'yyyy/mm/dd hh:mm:ss.ms'){
+    let oDate = null;
+    if(timestamp instanceof Date){
+        oDate = timestamp;
+    }
+    else {
+        oDate = new Date(timestamp);
+    }
     const matchResult = format.match(
         /^(y{2}|y{4})?([^ymdhs]{1})?(m{1,2})?([^ymdhs]{1})?(d{1,2})?([^ymdhs]{1,2})?(h{1,2})?([^ymdhs]{1})?(m{1,2})?([^ymdhs]{1})?(s{1,2})?([^ymdhs]{1})?(ms)?([^ymdhs]{1})?$/i
     );
