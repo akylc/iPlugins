@@ -19,7 +19,7 @@ export interface VueMount {
      * @param ts 时间戳
      * @param format 想要返回的时间格式, 例如: 'yyyy/mm/dd hh:mm:ss.ms'
      */
-    $iTimestamp(ts: number, format: string): string;
+    $iTimestamp(ts: number|string|Date, format: string): string;
 }
 
 declare module 'vue/types/vue' {
